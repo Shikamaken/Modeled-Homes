@@ -3,6 +3,10 @@ const router = express.Router();
 const { spawn } = require('child_process');
 const path = require('path');
 const { connectDB } = require('../utils/db');
+const mongoose = require('mongoose'); // Added mongoose for database interaction
+
+// Define the full path to your Python interpreter
+const pythonPath = 'C:\\Users\\shika\\modeled-homes-hvac\\venv\\Scripts\\python.exe'; // Updated Python path
 
 // POST /api/embeddings/generate
 // Body: { planId: "string", pageNumber: number, imagePath: "string" }
@@ -32,7 +36,8 @@ router.post('/generate', async (req, res) => {
 
 async function runEmbeddingScript(scriptPath, imgPath) {
   return new Promise((resolve, reject) => {
-    const python = spawn('python3', [scriptPath, imgPath]);
+    // Spawn the Python process
+    const python = spawn(pythonPath, [scriptPath, imgPath]);
 
     let dataChunks = [];
     let errorChunks = [];
@@ -45,8 +50,8 @@ async function runEmbeddingScript(scriptPath, imgPath) {
         return reject(`Embedding script failed: ${Buffer.concat(errorChunks).toString()}`);
       }
       try {
-        const embedding = JSON.parse(Buffer.concat(dataChunks).toString());
-        resolve(embedding);
+        const embeddings = JSON.parse(Buffer.concat(dataChunks).toString());
+        resolve(embeddings); // Return all embeddings (one per tile)
       } catch (parseError) {
         reject(`Could not parse embedding output: ${parseError}`);
       }
@@ -54,17 +59,20 @@ async function runEmbeddingScript(scriptPath, imgPath) {
   });
 }
 
-async function storeEmbeddingInDB(planId, pageNumber, embedding) {
-  const db = await connectDB();
-  const collection = db.collection('plan_embeddings');
-  
-  // Insert document with vector field
-  await collection.insertOne({
+async function storeEmbeddingInDB(planId, pageNumber, embeddings) {
+  const collection = mongoose.connection.db.collection('plan_embeddings');
+
+  // Insert each tile embedding as a separate document
+  const documents = embeddings.map((tile) => ({
     planId,
     pageNumber,
-    embedding, // This should be stored as an array of floats
-    createdAt: new Date()
-  });
+    tileIndex: tile.tileIndex, // Add tile metadata
+    embedding: tile.embedding, // Embedding for this tile
+    createdAt: new Date(),
+  }));
+
+  // Insert all documents in a batch
+  await collection.insertMany(documents);
 }
 
 module.exports = router;

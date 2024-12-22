@@ -1,19 +1,22 @@
 require('dotenv').config();
-const { MongoClient } = require('mongodb');
+const mongoose = require('mongoose');
 
-let client;
-let db;
+const connectDB = async () => {
+  try {
+    // Ensure MONGODB_URI is set
+    const mongoUri = process.env.MONGODB_URI;
+    if (!mongoUri) {
+      console.error('Error: MONGODB_URI is not set in the environment variables.');
+      process.exit(1); // Exit if MONGODB_URI is not set
+    }
 
-async function connectDB() {
-  if (!client) {
-    client = new MongoClient(process.env.MONGODB_URI, { // Updated here
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    await client.connect();
-    db = client.db('ModeledHomes');
+    // Connect to MongoDB Atlas
+    await mongoose.connect(mongoUri);
+    console.log('MongoDB connected successfully');
+  } catch (err) {
+    console.error('MongoDB connection error:', err);
+    process.exit(1); // Exit the process on connection failure
   }
-  return db;
-}
+};
 
-module.exports = { connectDB };
+module.exports = connectDB;
