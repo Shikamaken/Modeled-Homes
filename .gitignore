@@ -53,4 +53,6 @@ package-lock.json
 # dotenv environment variables file
 .env
 
+# virtual environments
 venv/
+venv_mmocr/
