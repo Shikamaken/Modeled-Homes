@@ -1,45 +1,89 @@
 import os
+import sys
 import json
 import cv2
 import numpy as np
 import argparse
 
-def detect_lines_in_image(image_path):
+def tile_coords_to_pdf(px, py, tile_info):
     """
-    Detect lines in an image using Hough Transform.
-    :param image_path: Path to the input image file.
-    :return: List of detected lines with their rho and theta values.
+    Converts tile-based pixel coordinates (px, py) into PDF/page coordinates,
+    using x_start, y_start, and zoom_factor from tile_info.
     """
+    x_start = tile_info["x_start"]
+    y_start = tile_info["y_start"]
+    zoom = tile_info["zoom_factor"]
+    # tile_x, tile_y => PDF coords
+    pdfx = (px + x_start) / zoom
+    pdfy = (py + y_start) / zoom
+    return pdfx, pdfy
+
+def detect_lines_in_image(image_path, tile_info):
+    """
+    1) Reads the tile image in grayscale,
+    2) Applies a bilateral filter to reduce noise while preserving edges,
+    3) Runs Canny edge detection,
+    4) Applies a morphological close to unify line edges,
+    5) Uses HoughLinesP for probabilistic line detection,
+    6) Converts the resulting line endpoints from tile pixels to PDF/page coords,
+    7) Returns a list of line dicts with 'pdf_line', 'rho', 'theta' (optional).
+    
+    :param image_path: Path to the tile PNG.
+    :param tile_info: Dict from tile_meta (x_start, y_start, zoom_factor, etc.).
+    :return: List of line entries with page-based coords.
+    """
+    # --- 1) Load grayscale
     image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
     if image is None:
         raise FileNotFoundError(f"Failed to load image: {image_path}")
 
-    edges = cv2.Canny(image, 50, 150, apertureSize=3)
-    lines = cv2.HoughLines(edges, 1, np.pi / 180, 200)
+    # --- 2) Bilateral filter to smooth out minor text noise
+    #     d=9, sigmaColor=75, sigmaSpace=75 are typical defaults
+    filtered = cv2.bilateralFilter(image, d=9, sigmaColor=75, sigmaSpace=75)
 
+    # --- 3) Canny
+    edges = cv2.Canny(filtered, 50, 150, apertureSize=3)
+
+    # --- 4) Morphological close to connect line segments
+    kernel = np.ones((3, 3), np.uint8)
+    closed = cv2.morphologyEx(edges, cv2.MORPH_CLOSE, kernel, iterations=1)
+
+    # --- 5) Probabilistic Hough transform
+    # tune threshold, minLineLength, maxLineGap as needed
+    lines_p = cv2.HoughLinesP(
+        closed, 
+        rho=1, 
+        theta=np.pi / 180, 
+        threshold=80,        # min votes in accumulator
+        minLineLength=50,    # discard short segments
+        maxLineGap=10        # merge gaps in collinear lines
+    )
+
+    # We'll store each line in PDF coords
     lines_list = []
-    if lines is not None:
-        for rho, theta in lines[:, 0]:
-            a = np.cos(theta)
-            b = np.sin(theta)
-            x0 = a * rho
-            y0 = b * rho
-            pt1 = (int(x0 + 1000 * (-b)), int(y0 + 1000 * a))
-            pt2 = (int(x0 - 1000 * (-b)), int(y0 - 1000 * a))
+    if lines_p is not None:
+        for line in lines_p:
+            x1, y1, x2, y2 = line[0]  # line is [ [x1, y1, x2, y2] ]
+            # convert to PDF coords
+            pdf_pt1 = tile_coords_to_pdf(x1, y1, tile_info)
+            pdf_pt2 = tile_coords_to_pdf(x2, y2, tile_info)
+            # we won't compute rho,theta for each line here, since HoughLinesP doesn't provide them
+            # if you need approximate rho/theta, you can compute them from (pdf_pt1, pdf_pt2).
             lines_list.append({
-                "line": [pt1, pt2],
-                "rho": rho,
-                "theta": theta
+                "pdf_line": [pdf_pt1, pdf_pt2]
             })
 
     return lines_list
 
 def process_line_detection(input_dir, tile_meta_path, output_path):
     """
-    Processes all images in a directory for line detection and includes page_index.
-    :param input_dir: Path to the directory containing images.
-    :param tile_meta_path: Path to the tile metadata JSON file.
-    :param output_path: Path to save the line detection results.
+    1) Loads tile_meta.json to get x_start, y_start, zoom_factor for each tile,
+    2) For each .png tile, runs detect_lines_in_image(...),
+    3) Writes final lines in PDF/page coords to line_detection_results.json.
+    
+    :param input_dir: Directory containing page_<idx>/tile_*.png
+    :param tile_meta_path: Path to tile_meta.json
+    :param output_path: JSON file for storing line detection results.
     """
     if not os.path.isdir(input_dir):
         raise NotADirectoryError(f"Input directory not found: {input_dir}")
@@ -50,32 +94,43 @@ def process_line_detection(input_dir, tile_meta_path, output_path):
     with open(tile_meta_path, 'r', encoding='utf-8') as f:
         tile_metadata = json.load(f)
 
+    # Build a quick lookup: tile_info_map[(page_idx, tile_filename)] = tile_entry
+    tile_info_map = {}
+    for meta in tile_metadata:
+        page_idx = meta["page_index"]
+        tile_fn = meta.get("tile_filename", "")
+        tile_key = (page_idx, tile_fn)
+        tile_info_map[tile_key] = meta
+
     results = []
     for root, _, files in os.walk(input_dir):
         for file in files:
             if file.lower().endswith(".png"):
                 image_path = os.path.join(root, file)
+
+                # find matching tile_meta
+                tile_filename = os.path.basename(image_path)
+                # Guess page index from folder or rely on tile_info_map if you have a direct approach
+                # For now let's do a naive approach:
+                possible_keys = [k for k in tile_info_map.keys() if k[1] == tile_filename]
+                if not possible_keys:
+                    print(f"Metadata not found for tile: {tile_filename}. Skipping.")
+                    continue
+
+                # If there's only one match or you trust there's only one
+                page_idx, _ = possible_keys[0]
+                tile_info = tile_info_map[(page_idx, tile_filename)]
+
                 try:
-                    detected_lines = detect_lines_in_image(image_path)
+                    line_segments = detect_lines_in_image(image_path, tile_info)
 
-                    # Retrieve metadata for the current tile
-                    tile_filename = os.path.basename(image_path)
-                    tile_meta = next((meta for meta in tile_metadata if meta["tile_filename"] == tile_filename), None)
-                    if not tile_meta:
-                        print(f"Metadata not found for tile: {tile_filename}. Skipping.")
-                        continue
-
-                    page_index = tile_meta["page_index"]
-
-                    # Include page_index in the results
-                    results.extend([{
-                        "image_path": image_path,
-                        "page_index": page_index,
-                        "line": [[float(coord) for coord in pt] for pt in line["line"]],
-                        "rho": float(line["rho"]),
-                        "theta": float(line["theta"])
-                    } for line in detected_lines])
-
+                    # Add them to results
+                    for seg in line_segments:
+                        results.append({
+                            "page_index": page_idx,
+                            "image_path": image_path,
+                            "pdf_line": seg["pdf_line"]
+                        })
                 except Exception as e:
                     print(f"Error processing {image_path}: {e}")
 
@@ -86,13 +141,14 @@ def process_line_detection(input_dir, tile_meta_path, output_path):
     print(f"Line detection results saved to {output_path}")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Detect lines in tile images and include page_index.")
-    parser.add_argument("input_dir", help="Directory containing tile images.")
-    parser.add_argument("tile_meta_path", help="Path to the tile metadata JSON file.")
-    parser.add_argument("output_path", help="Path to save the line detection results.")
+    parser = argparse.ArgumentParser(description="Detect lines in tile images, returning PDF coords.")
+    parser.add_argument("input_dir", help="Directory containing page_<idx>/tile_*.png")
+    parser.add_argument("tile_meta_path", help="Path to tile_meta.json with x_start,y_start,zoom_factor.")
+    parser.add_argument("output_path", help="Path to save final line_detection_results.json.")
     args = parser.parse_args()
 
     try:
         process_line_detection(args.input_dir, args.tile_meta_path, args.output_path)
     except Exception as e:
         print(f"Error during line detection: {e}")
+        sys.exit(1)

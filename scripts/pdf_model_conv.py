@@ -69,7 +69,6 @@ def pdf_model_conv():
             # Categorize merged text
             run_script("categorize_text.py", [
                 paths["merged_results"],
-                paths["tile_meta"],
                 paths["categorized_results"]
             ])
 

@@ -1,3 +1,4 @@
+import os
 import json
 import matplotlib.pyplot as plt
 
@@ -10,10 +11,11 @@ MIN_LINE_LENGTH = 50
 def visualize_links(categorized_path, lines_path):
     """
     Visualizes dimension bounding boxes and detected lines per page.
-    
+
     :param categorized_path: Path to categorized_results.json.
     :param lines_path: Path to line_detection_results.json.
     """
+    # Load categorized text and line data
     with open(categorized_path, 'r', encoding='utf-8') as f:
         categorized_data = json.load(f)
     with open(lines_path, 'r', encoding='utf-8') as f:
@@ -22,8 +24,10 @@ def visualize_links(categorized_path, lines_path):
     # Filter lines based on minimum length
     filtered_lines = []
     for line_entry in line_data:
-        line = line_entry["line"]
-        line_length = ((line[1][0] - line[0][0])**2 + (line[1][1] - line[0][1])**2)**0.5
+        pdf_line = line_entry["pdf_line"]
+        x1, y1 = pdf_line[0]
+        x2, y2 = pdf_line[1]
+        line_length = ((x2 - x1)**2 + (y2 - y1)**2)**0.5
         if line_length >= MIN_LINE_LENGTH:
             filtered_lines.append(line_entry)
     if LOGGING_ENABLED:
@@ -51,11 +55,11 @@ def visualize_links(categorized_path, lines_path):
         # Plot lines for the current page
         for line_entry in filtered_lines:
             if line_entry.get("page_index", -1) == page_index:
-                line = line_entry["line"]
-                x_coords, y_coords = zip(*line)
+                pdf_line = line_entry["pdf_line"]
+                x_coords, y_coords = zip(*pdf_line)
                 ax.plot(x_coords, y_coords, color='red', label='Line' if 'Line' not in ax.get_legend_handles_labels()[1] else None)
                 if LOGGING_ENABLED:
-                    print(f"Page {page_index}: Plotted line {line}")
+                    print(f"Page {page_index}: Plotted line {pdf_line}")
 
         # Add legend, grid, and show
         ax.legend()
@@ -65,8 +69,8 @@ def visualize_links(categorized_path, lines_path):
 
 if __name__ == "__main__":
     # Define file paths
-    categorized_path = "C:\\Users\\shika\\modeled-homes-hvac\\data\\output\\results\\716 Baxter Ave S\\categorized_results.json"
-    lines_path = "C:\\Users\\shika\\modeled-homes-hvac\\data\\output\\results\\716 Baxter Ave S\\line_detection_results.json"
+    categorized_path = "C:\\Users\\shika\\modeled-homes-hvac\\data\\output\\results\\Sample Floor Plan\\categorized_results.json"
+    lines_path = "C:\\Users\\shika\\modeled-homes-hvac\\data\\output\\results\\Sample Floor Plan\\line_detection_results.json"
 
     # Visualize links
     visualize_links(categorized_path, lines_path)
