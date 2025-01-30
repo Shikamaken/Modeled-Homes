@@ -177,6 +177,7 @@ def ocr_tiles(tiles_dir, output_path, device="cpu", save_vis=False):
     mmocr = MMOCRInferencer(
         det="DBNetPP",
         rec="ABINet",
+        kie="SDMGR",
         device=device
     )
 

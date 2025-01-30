@@ -27652,10 +27652,16 @@
       "tile_height": 450
     },
     "overlayData": {
-      "textBlocks": [],
+      "textBlocks": [
+        {
+          "text": "",
+          "bbox": [],
+          "confidence": 1.0
+        }
+      ],
       "dimensions": [],
       "lines": [],
-      "isBlank": true
+      "isBlank": false
     }
   },
   {
@@ -27671,10 +27677,16 @@
       "tile_height": 450
     },
     "overlayData": {
-      "textBlocks": [],
+      "textBlocks": [
+        {
+          "text": "",
+          "bbox": [],
+          "confidence": 1.0
+        }
+      ],
       "dimensions": [],
       "lines": [],
-      "isBlank": true
+      "isBlank": false
     }
   },
   {
@@ -27690,10 +27702,16 @@
       "tile_height": 450
     },
     "overlayData": {
-      "textBlocks": [],
+      "textBlocks": [
+        {
+          "text": "",
+          "bbox": [],
+          "confidence": 1.0
+        }
+      ],
       "dimensions": [],
       "lines": [],
-      "isBlank": true
+      "isBlank": false
     }
   },
   {
@@ -27709,10 +27727,16 @@
       "tile_height": 450
     },
     "overlayData": {
-      "textBlocks": [],
+      "textBlocks": [
+        {
+          "text": "",
+          "bbox": [],
+          "confidence": 1.0
+        }
+      ],
       "dimensions": [],
       "lines": [],
-      "isBlank": true
+      "isBlank": false
     }
   },
   {

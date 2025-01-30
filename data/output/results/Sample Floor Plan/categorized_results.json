@@ -11450,6 +11450,17 @@
   {
     "plan_id": "Sample Floor Plan",
     "page_index": 0,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\output\\results\\Sample Floor Plan\\page_0\\tile_1350_6750.png",
+    "x_start": 1350,
+    "y_start": 6750,
+    "error": "cannot reshape tensor of 0 elements into shape [0, -1] because the unspecified dimension size -1 can be any value and is ambiguous",
+    "source": "ocr",
+    "category": "misc",
+    "needs_review": false
+  },
+  {
+    "plan_id": "Sample Floor Plan",
+    "page_index": 0,
     "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\output\\results\\Sample Floor Plan\\page_0\\tile_2700_0.png",
     "x_start": 2700,
     "y_start": 0,
@@ -13807,6 +13818,17 @@
     "confidence": 0.9075952768325806,
     "source": "ocr",
     "category": "label",
+    "needs_review": false
+  },
+  {
+    "plan_id": "Sample Floor Plan",
+    "page_index": 0,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\output\\results\\Sample Floor Plan\\page_0\\tile_2700_6750.png",
+    "x_start": 2700,
+    "y_start": 6750,
+    "error": "cannot reshape tensor of 0 elements into shape [0, -1] because the unspecified dimension size -1 can be any value and is ambiguous",
+    "source": "ocr",
+    "category": "misc",
     "needs_review": false
   },
   {
@@ -16558,6 +16580,17 @@
   {
     "plan_id": "Sample Floor Plan",
     "page_index": 0,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\output\\results\\Sample Floor Plan\\page_0\\tile_4050_6750.png",
+    "x_start": 4050,
+    "y_start": 6750,
+    "error": "cannot reshape tensor of 0 elements into shape [0, -1] because the unspecified dimension size -1 can be any value and is ambiguous",
+    "source": "ocr",
+    "category": "misc",
+    "needs_review": false
+  },
+  {
+    "plan_id": "Sample Floor Plan",
+    "page_index": 0,
     "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\output\\results\\Sample Floor Plan\\page_0\\tile_5400_0.png",
     "x_start": 5400,
     "y_start": 0,
@@ -19027,6 +19060,17 @@
     "confidence": 0.9998800873756408,
     "source": "ocr",
     "category": "dimension",
+    "needs_review": false
+  },
+  {
+    "plan_id": "Sample Floor Plan",
+    "page_index": 0,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\output\\results\\Sample Floor Plan\\page_0\\tile_5400_6750.png",
+    "x_start": 5400,
+    "y_start": 6750,
+    "error": "cannot reshape tensor of 0 elements into shape [0, -1] because the unspecified dimension size -1 can be any value and is ambiguous",
+    "source": "ocr",
+    "category": "misc",
     "needs_review": false
   },
   {
