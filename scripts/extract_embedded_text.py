@@ -6,10 +6,8 @@ import pdfplumber
 def extract_embedded_text(pdf_path, output_json):
     """
     Extracts embedded text from a PDF file and saves it as a JSON file,
-    ensuring we produce a 'bbox' and a valid 'text' string for each entry.
-
-    :param pdf_path: Path to the input PDF file.
-    :param output_json: Path to save the extracted embedded text as JSON.
+    mapping the bounding box to bottom-left PDF coords
+    (inverting y from pdfplumber's default top-left).
     """
     if not os.path.isfile(pdf_path):
         raise FileNotFoundError(f"PDF not found: {pdf_path}")
@@ -17,31 +15,36 @@ def extract_embedded_text(pdf_path, output_json):
     results = []
     with pdfplumber.open(pdf_path) as pdf:
         for page_index, page in enumerate(pdf.pages):
+            page_height = page.height  # pdfplumber page’s top-left-based page height
+
             text_objects = page.extract_words()  # Extract embedded text as word objects
-
             for obj in text_objects:
-                # Coerce text to string (avoid None)
-                raw_text = obj.get("text", "")
-                if raw_text is None:
-                    raw_text = ""
+                # Coerce text to string
+                raw_text = obj.get("text", "") or ""
 
-                # Build 'bbox' from pdfplumber fields: [x0, top, x1, bottom]
-                bbox = [
-                    obj.get("x0", 0),
-                    obj.get("top", 0),
-                    obj.get("x1", 0),
-                    obj.get("bottom", 0),
-                ]
+                # pdfplumber returns top-based coords:
+                # obj["x0"], obj["top"], obj["x1"], obj["bottom"]
+                x0 = obj.get("x0", 0)
+                top = obj.get("top", 0)
+                x1 = obj.get("x1", 0)
+                bottom = obj.get("bottom", 0)
 
-                # Construct the final dict, including "source"
+                # Invert y to get bottom-left PDF coords:
+                #   y0_bottomleft = page_height - bottom
+                #   y1_bottomleft = page_height - top
+                y0_bottomleft = page_height - bottom
+                y1_bottomleft = page_height - top
+
+                # Build the final bbox in bottom-left orientation:
+                pdf_bbox = [x0, y0_bottomleft, x1, y1_bottomleft]
+
                 entry = {
                     "page_index": page_index,
                     "text": raw_text,
-                    "bbox": bbox,
-                    "confidence": 1.0,  # default for embedded text
+                    "bbox": pdf_bbox,     # now in bottom-left PDF coords
+                    "confidence": 1.0,    # default for embedded text
                     "source": "embedded"
                 }
-
                 results.append(entry)
 
     # Save results to JSON

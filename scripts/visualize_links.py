@@ -69,8 +69,8 @@ def visualize_links(categorized_path, lines_path):
 
 if __name__ == "__main__":
     # Define file paths
-    categorized_path = "C:\\Users\\shika\\modeled-homes-hvac\\data\\output\\results\\Sample Floor Plan\\categorized_results.json"
-    lines_path = "C:\\Users\\shika\\modeled-homes-hvac\\data\\output\\results\\Sample Floor Plan\\line_detection_results.json"
+    categorized_path = "C:\\Users\\shika\\modeled-homes-hvac\\data\\output\\results\\Sample Floor Plan (Redacted)\\categorized_results.json"
+    lines_path = "C:\\Users\\shika\\modeled-homes-hvac\\data\\output\\results\\Sample Floor Plan (Redacted)\\line_detection_results.json"
 
     # Visualize links
     visualize_links(categorized_path, lines_path)

@@ -50,7 +50,7 @@ def link_dimensions(categorized_path, lines_path, output_path):
         min_distance = float('inf')
 
         for line_entry in line_data:
-            line = line_entry.get("line", [])
+            line = line_entry.get("pdf_line", [])
             if len(line) == 2 and all(isinstance(pt, list) for pt in line):
                 flat_line = [coord for pt in line for coord in pt]
                 distance = point_to_line_distance(center, flat_line)

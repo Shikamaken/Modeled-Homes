@@ -5,18 +5,27 @@ import cv2
 import numpy as np
 import argparse
 
-def tile_coords_to_pdf(px, py, tile_info):
+def tile_coords_to_pdf_bottom_left(px, py, tile_info):
     """
-    Converts tile-based pixel coordinates (px, py) into PDF/page coordinates,
-    using x_start, y_start, and zoom_factor from tile_info.
+    Converts tile-based pixel coords (px, py) to bottom-left PDF coords.
+    tile_info must have:
+      - x_start, y_start (top-left offsets in px)
+      - zoom_factor
+      - pdf_height_points (the page height in PDF points for the y-inversion)
     """
     x_start = tile_info["x_start"]
     y_start = tile_info["y_start"]
     zoom = tile_info["zoom_factor"]
-    # tile_x, tile_y => PDF coords
-    pdfx = (px + x_start) / zoom
-    pdfy = (py + y_start) / zoom
-    return pdfx, pdfy
+    pdf_height_pts = tile_info["pdf_height_points"]  # from pdf_to_tiles.py
+
+    # Step 1) top-based PDF coords in points
+    pdfx_top = (px + x_start) / zoom
+    pdfy_top = (py + y_start) / zoom
+
+    # Step 2) invert Y for bottom-left orientation
+    pdfy_bottom = pdf_height_pts - pdfy_top
+
+    return (pdfx_top, pdfy_bottom)
 
 def detect_lines_in_image(image_path, tile_info):
     """
@@ -63,12 +72,9 @@ def detect_lines_in_image(image_path, tile_info):
     lines_list = []
     if lines_p is not None:
         for line in lines_p:
-            x1, y1, x2, y2 = line[0]  # line is [ [x1, y1, x2, y2] ]
-            # convert to PDF coords
-            pdf_pt1 = tile_coords_to_pdf(x1, y1, tile_info)
-            pdf_pt2 = tile_coords_to_pdf(x2, y2, tile_info)
-            # we won't compute rho,theta for each line here, since HoughLinesP doesn't provide them
-            # if you need approximate rho/theta, you can compute them from (pdf_pt1, pdf_pt2).
+            x1, y1, x2, y2 = line[0]
+            pdf_pt1 = tile_coords_to_pdf_bottom_left(x1, y1, tile_info)
+            pdf_pt2 = tile_coords_to_pdf_bottom_left(x2, y2, tile_info)
             lines_list.append({
                 "pdf_line": [pdf_pt1, pdf_pt2]
             })

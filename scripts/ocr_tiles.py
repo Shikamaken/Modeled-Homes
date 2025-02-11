@@ -3,6 +3,7 @@ import sys
 import re
 import json
 import argparse
+from util_tile_meta import load_tile_meta_map, tile_coords_to_pdf_bottom_left
 from mmocr.apis.inferencers.mmocr_inferencer import MMOCRInferencer
 
 def chunk_polygon(flat_list):
@@ -17,19 +18,45 @@ def chunk_polygon(flat_list):
         pairs.append([flat_list[i], flat_list[i+1]])
     return pairs
 
-def flatten_ocr_result(ocr_result, plan_id, page_idx, image_path, x_start, y_start, final_snippets):
+def flatten_ocr_result(
+    ocr_result: dict,
+    plan_id: str,
+    page_idx: int,
+    image_path: str,
+    x_start: int,
+    y_start: int,
+    final_snippets: list,
+    tile_meta_map: dict
+):
     """
     Flattens the raw 'ocr_result' dictionary into snippet-level bounding box entries.
-    Each entry has a top-level 'bbox', 'text', 'confidence', and 'source' = 'ocr'.
+    Each entry has:
+      - 'bbox' in bottom-left PDF coords
+      - 'text', 'confidence', 'source'='ocr', etc.
+
+    :param ocr_result: The output from MMOCRInferencer(...).
+    :param plan_id: The plan/document ID string.
+    :param page_idx: The page index inferred from the tile or path.
+    :param image_path: Path to the tile PNG.
+    :param x_start: x offset in rendered pixels for the tile.
+    :param y_start: y offset in rendered pixels for the tile.
+    :param final_snippets: The main list being appended to with snippet dicts.
+    :param tile_meta_map: Dict keyed by (page_idx, x_start, y_start), returning metadata for the tile:
+            {
+              "x_start": ...,
+              "y_start": ...,
+              "zoom_factor": ...,
+              "pdf_width_points": ...,
+              "pdf_height_points": ...,
+              ...
+            }
     """
+    # If there's no text predicted or an empty result
     if not ocr_result:
-        # If no text predicted
         final_snippets.append({
             "plan_id": plan_id,
             "page_index": page_idx,
             "image_path": image_path,
-            "x_start": x_start,
-            "y_start": y_start,
             "bbox": None,
             "text": "",
             "confidence": 0.0,
@@ -37,38 +64,54 @@ def flatten_ocr_result(ocr_result, plan_id, page_idx, image_path, x_start, y_sta
         })
         return
 
+    # Retrieve 'predictions' array
     predictions = ocr_result.get("predictions", [])
+    if not isinstance(predictions, list):
+        # fallback
+        final_snippets.append({
+            "plan_id": plan_id,
+            "page_index": page_idx,
+            "image_path": image_path,
+            "bbox": None,
+            "text": "",
+            "confidence": 0.0,
+            "source": "ocr",
+            "error": "predictions is not a list"
+        })
+        return
+
+    # Build a tile_key to find the tile_info from tile_meta_map
+    tile_key = (page_idx, x_start, y_start)
+    tile_info = tile_meta_map.get(tile_key)
+
     for pred in predictions:
         det_polygons = pred.get("det_polygons", [])
         rec_texts = pred.get("rec_texts", [])
         rec_scores = pred.get("rec_scores", [])
 
-        # Only iterate up to the min length to avoid index mismatches
+        # Only iterate up to min length to avoid index mismatches
         max_len = min(len(det_polygons), len(rec_texts), len(rec_scores))
-
         for i in range(max_len):
             poly = det_polygons[i]
             snippet_text = rec_texts[i]
             snippet_conf = rec_scores[i]
 
-            # 1) If 'poly' isn't a list, skip
+            # Validate polygon 'poly' could be a single list of floats [x1,y1,x2,y2,...]
+            # or a nested list of [ [x,y], [x2,y2], ...].
             if not isinstance(poly, list):
                 final_snippets.append({
                     "plan_id": plan_id,
                     "page_index": page_idx,
                     "image_path": image_path,
-                    "x_start": x_start,
-                    "y_start": y_start,
                     "error": "poly is not a list",
                     "invalid_value": str(poly),
                     "source": "ocr"
                 })
                 continue
 
-            # 2) If 'poly' is a single list of floats => chunk
-            # or if it's a nested list already => handle it
+            # Convert poly to xs, ys
             if all(isinstance(val, (float, int)) for val in poly):
-                # chunk 8 floats or variable length into [ [x,y], [x2,y2], ...]
+                # Flattened list
                 pair_list = chunk_polygon(poly)
                 if pair_list is None:
                     final_snippets.append({
@@ -87,7 +130,6 @@ def flatten_ocr_result(ocr_result, plan_id, page_idx, image_path, x_start, y_sta
                 xs = [pt[0] for pt in poly]
                 ys = [pt[1] for pt in poly]
             else:
-                # Invalid format
                 final_snippets.append({
                     "plan_id": plan_id,
                     "page_index": page_idx,
@@ -98,24 +140,36 @@ def flatten_ocr_result(ocr_result, plan_id, page_idx, image_path, x_start, y_sta
                 })
                 continue
 
-            # 3) Build bounding box
-            bbox = [min(xs), min(ys), max(xs), max(ys)]
+            # Build tile-based bounding box
+            tile_xmin = min(xs)
+            tile_xmax = max(xs)
+            tile_ymin = min(ys)
+            tile_ymax = max(ys)
 
-            # 4) Ensure text is string
+            # If we have metadata, transform tile coords -> bottom-left PDF coords
+            if tile_info:
+                pdf_bbox = tile_coords_to_pdf_bottom_left(
+                    tile_xmin, tile_ymin,
+                    tile_xmax, tile_ymax,
+                    tile_info
+                )
+            else:
+                # fallback: store tile coords only
+                pdf_bbox = [tile_xmin, tile_ymin, tile_xmax, tile_ymax]
+
+            # Ensure text is string
             if not isinstance(snippet_text, str):
                 snippet_text = str(snippet_text)
-            # 5) Ensure confidence is float
+
+            # Ensure confidence is float
             if not isinstance(snippet_conf, (float, int)):
                 snippet_conf = 1.0
 
-            # 6) Append final snippet
             final_snippets.append({
                 "plan_id": plan_id,
                 "page_index": page_idx,
                 "image_path": image_path,
-                "x_start": x_start,
-                "y_start": y_start,
-                "bbox": bbox,
+                "bbox": pdf_bbox,   # now in bottom-left PDF coords
                 "text": snippet_text,
                 "confidence": float(snippet_conf),
                 "source": "ocr"
@@ -155,7 +209,7 @@ def infer_plan_id_from_path(image_path):
     except (ValueError, IndexError):
         return None
 
-def ocr_tiles(tiles_dir, output_path, device="cpu", save_vis=False):
+def ocr_tiles(tiles_dir, output_path, tile_meta_path, device="cpu", save_vis=False):
     """
     Performs OCR on all tiles in the specified directory, flattening snippet-level
     bounding boxes into 'bbox', 'text', 'confidence', etc. for each polygon. 
@@ -173,11 +227,11 @@ def ocr_tiles(tiles_dir, output_path, device="cpu", save_vis=False):
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     visualization_dir = os.path.join(project_root, "data", "output", "visualizations")
     os.makedirs(visualization_dir, exist_ok=True)
+    tile_meta_map = load_tile_meta_map(tile_meta_path)
 
     mmocr = MMOCRInferencer(
         det="DBNetPP",
         rec="ABINet",
-        kie="SDMGR",
         device=device
     )
 
@@ -207,7 +261,8 @@ def ocr_tiles(tiles_dir, output_path, device="cpu", save_vis=False):
                         image_path=image_path,
                         x_start=x_start if x_start is not None else 0,
                         y_start=y_start if y_start is not None else 0,
-                        final_snippets=final_snippets
+                        final_snippets=final_snippets,
+                        tile_meta_map=tile_meta_map
                     )
 
                 except Exception as e:
@@ -238,6 +293,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process tiles with MMOCR.")
     parser.add_argument("tiles_dir", help="Path to the directory containing tiled PNGs.")
     parser.add_argument("output_path", help="Path to save the snippet-level OCR results.")
+    parser.add_argument("tile_meta_path", help="Path to directory containing tile_meta.json.")
     parser.add_argument("--device", default="cpu", help="Device to run MMOCR on (cpu or cuda).")
     parser.add_argument("--save-vis", action="store_true", help="Enable saving visualizations.")
     args = parser.parse_args()
@@ -246,6 +302,7 @@ if __name__ == "__main__":
         ocr_tiles(
             tiles_dir=args.tiles_dir,
             output_path=args.output_path,
+            tile_meta_path=args.tile_meta_path,
             device=args.device,
             save_vis=args.save_vis
         )

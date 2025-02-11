@@ -56,3 +56,6 @@ package-lock.json
 # virtual environments
 venv/
 venv_mmocr/
+
+# cache
+__pycache__/

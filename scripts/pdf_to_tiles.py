@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import os
 import sys
 import fitz  # PyMuPDF
@@ -43,6 +41,10 @@ def convert_pdf_to_tiles(pdf_path, output_dir, plan_id=None,
         # Rendered page size in pixels
         page_width = int(page.rect.width * zoom_factor)
         page_height = int(page.rect.height * zoom_factor)
+
+        # Page size in PDF coordinate space
+        pdf_width_points = page.rect.width
+        pdf_height_points = page.rect.height
 
         num_tiles_x = (page_width + tile_size - 1) // tile_size
         num_tiles_y = (page_height + tile_size - 1) // tile_size
@@ -122,6 +124,8 @@ def convert_pdf_to_tiles(pdf_path, output_dir, plan_id=None,
                     "tile_filename": tile_filename,
                     "page_width": page_width,    # store full page size in px
                     "page_height": page_height,
+                    "pdf_width_points": page.rect.width,
+                    "pdf_height_points": page.rect.height,
                 }
                 tile_metadata.append(meta_entry)
                 global_tile_index += 1

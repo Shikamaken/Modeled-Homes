@@ -56,7 +56,12 @@ def pdf_model_conv():
             run_script("pdf_to_tiles.py", [pdf_path, plan_dir, "300", "1500"])
 
             # Perform OCR on tiles
-            run_script("ocr_tiles.py", [plan_dir, paths["ocr_results"], "--save-vis"])
+            run_script("ocr_tiles.py", [
+                plan_dir, 
+                paths["ocr_results"], 
+                paths["tile_meta"],
+                "--save-vis"
+            ])
 
             # Merge text (embedded + OCR)
             run_script("merge_text.py", [
