@@ -1,17 +1,25 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import PDFConverter from './components/HVAC/PDFConverter';
-import AirflowAnimation from './components/HVAC/AirflowAnimation';
-import ARViewer from './components/HVAC/ARViewer';
-import './App.css';
+import { Routes, Route, Link } from "react-router-dom";
+import DesignSuite from "./components/HVAC/DesignSuite";
+import Home from "./components/Home";
 
 function App() {
   return (
-    <div className="App">
+    <div className="flex flex-col items-center p-4">
+      <h1 className="text-xl font-bold mb-4">Modeled Homes</h1>
+      <nav>
+        <ul className="flex space-x-4">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/design-suite">Design Suite</Link>
+          </li>
+        </ul>
+      </nav>
       <Routes>
-        <Route path="/pdf-converter" element={<PDFConverter />} />
-        <Route path="/airflow-animation" element={<AirflowAnimation />} />
-        <Route path="/ar-viewer" element={<ARViewer />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/design-suite" element={<DesignSuite />} />
       </Routes>
     </div>
   );

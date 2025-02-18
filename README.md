@@ -47,7 +47,53 @@ Next Steps:
 - Convert extracted data into preliminary structured 3D models for validation.
 - Develop the HVAC Design Suite for MVP launch.
 - Integrate AR for on-site project visualization.
-- Automate MEP design calculations and bid generation (HVAC load, energy, materials, etc.).  
+- Automate MEP design calculations and bid generation (HVAC load, energy, materials, etc.).
+
+---
+
+Recent Updates
+
+Frontend Development Initiated
+- New UI Components
+  - `CreateProject.js` – Enables users to create projects and store metadata.
+  - `DesignSuite.js` – UI for selecting and processing floor plans.
+  - PDF Upload – Users can now upload PDFs and link them to specific projects.
+- New Assets & Configurations
+  - `public/manifest.json` – Defines web app metadata.
+  - `public/favicon.ico` – Custom Modeled Homes logo.
+
+Backend API Enhancements
+- `projects.js`
+  - API endpoints for creating projects and uploading PDFs.
+  - Projects now store metadata and associate uploaded PDFs.
+  - `projectId` is now passed as a **URL parameter** to resolve form data issues.
+- `pdf_model_conv.py`
+  - Expanded to incorporate new pipeline scripts.
+  - Adjusted execution order to accommodate new processing logic.
+
+New & Updated Processing Scripts
+- `id_area_scale.py` (NEW)
+  - Processes after `merge_text.py`.
+  - Extracts floor plan area and blueprint scale (results not yet utilized – refinement required).
+- `visualize_walls.py`
+  - Test script for wall visualization after the pipeline completes.
+  - Replaces `visualize_links.py`, improving clarity of detected wall structures.
+- `classify_structures.py` (NEW)
+  - Framework for wall classification (interior vs. exterior).
+  - Current results are incorrect – exterior walls often misclassified as interior.
+
+Updated Pipeline Execution Order
+1. extract_embedded_text.py
+2. pdf_to_tiles.py
+3. ocr_tiles.py
+4. merge_text.py
+5. id_area_scale.py
+6. categorize_text.py
+7. line_detection.py
+8. classify_structures.py
+9. link_dimensions.py
+10. assemble_overlay.py
+11. batch_embed_overlays.py
 
 ---
 
@@ -81,14 +127,16 @@ modeled-homes/
 │   ├── ocr_tiles.py              # Runs OCR on extracted tiles
 │   ├── util_tile_meta.py         # Helper script to load tile_meta.json and convert tile-based coordinates to bottom-left PDF coordinates
 │   ├── merge_text.py             # Merges extracted text with structured data
+│   ├── id_area_scale.py          # Groups text to locate floor plan title, area, and scale
 │   ├── categorize_text.py        # Classifies extracted text into dimensions, labels, or miscellaneous categories
 │   ├── line_detection.py         # Detects walls & structures
+│   ├── classify_structures.py    # Sorts interior and exterior walls
 │   ├── link_dimensions.py        # Links extracted dimensions to their nearest detected lines based on distance calculations
 │   ├── assemble_overlay.py       # Combines extracted data into structured format
 │   ├── batch_embed_overlays.py   # Embeds overlay data for AI processing and stores results in MongoDB
 │   ├── clip_embedding.py         # Embeds images & text for vector search
 │   ├── pdf_model_conv.py         # Orchestrates the full pipeline execution
-│   ├── visualize_links.py        # Generates visual overlays of detected lines and text (test script, run after pipeline completion)
+│   ├── visualize_walls.py        # Generates visual overlays of detected walls (test script, run after pipeline completion)
 │── tools/                 # AI training & inference scripts
 │   ├── infer.py                  # AI inference logic
 │   ├── train.py                  # AI training script
@@ -109,12 +157,24 @@ cd Modeled-Homes
 
 pip install -r requirements.txt
 
-3. Create a .env file:
+3. Backend Setup
+
+cd backend
+npm install
+node server.js
+
+4. Frontend Setup
+
+cd frontend
+npm install
+npm start
+
+5. Create a .env file:
 
 echo "MONGODB_URI=<your-mongodb-uri>" > .env
 echo "PORT=4000" >> .env
 
-4. Run the pipeline:
+6. Run the pipeline:
 
 python scripts/pdf_model_conv.py
 
@@ -123,5 +183,5 @@ python scripts/pdf_model_conv.py
 
 Contact
 
-Email: [kenny@modeledhomes.com](mailto:kenny@modeledhomes.com)
+Email: [info@modeledhomes.com](mailto:info@modeledhomes.com)
 Phone: (561) 247-1837

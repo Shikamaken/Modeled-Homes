@@ -8,19 +8,20 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@react-three/drei": "^9.108.4",
+    "@react-three/drei": "^9.121.5",
     "@react-three/fiber": "^8.16.8",
     "@react-three/xr": "^6.0.0",
     "@reduxjs/toolkit": "^1.7.0",
     "@tensorflow-models/coco-ssd": "^2.2.2",
     "@tensorflow/tfjs": "^3.7.0",
+    "axios": "^1.7.9",
     "pdfjs-dist": "^4.4.168",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.0.2",
     "redux": "^4.1.2",
-    "three": "^0.141.0"
+    "three": "^0.173.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",

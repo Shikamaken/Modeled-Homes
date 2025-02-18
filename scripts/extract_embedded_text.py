@@ -42,7 +42,7 @@ def extract_embedded_text(pdf_path, output_json):
                     "page_index": page_index,
                     "text": raw_text,
                     "bbox": pdf_bbox,     # now in bottom-left PDF coords
-                    "confidence": 1.0,    # default for embedded text
+                    "confidence": 0.8,    # default for embedded text
                     "source": "embedded"
                 }
                 results.append(entry)

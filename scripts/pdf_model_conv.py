@@ -43,6 +43,7 @@ def pdf_model_conv():
             "merged_results": os.path.join(plan_dir, "merged_results.json"),
             "categorized_results": os.path.join(plan_dir, "categorized_results.json"),
             "line_detection_results": os.path.join(plan_dir, "line_detection_results.json"),
+            "classified_walls": os.path.join(plan_dir, "classified_walls.json"),
             "linked_dimensions": os.path.join(plan_dir, "linked_dimensions.json"),
             "final_overlays": os.path.join(plan_dir, "final_overlays.json"),
         }
@@ -71,6 +72,11 @@ def pdf_model_conv():
                 paths["merged_results"]
             ])
 
+            # ID floor plan, surface area, and scale
+            run_script("id_area_scale.py", [
+                paths["merged_results"]
+            ])
+
             # Categorize merged text
             run_script("categorize_text.py", [
                 paths["merged_results"],
@@ -82,6 +88,12 @@ def pdf_model_conv():
                 plan_dir,
                 paths["tile_meta"],
                 paths["line_detection_results"]
+            ])
+
+            # Classify detected lines into structures (walls, partitions, etc.)
+            run_script("classify_structures.py", [
+                paths["line_detection_results"],
+                paths["classified_walls"]
             ])
 
             # Link dimensions to detected lines
