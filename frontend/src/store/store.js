@@ -1,8 +1,11 @@
+// frontend/src/store/store.js
 import { configureStore } from '@reduxjs/toolkit';
-import rootReducer from '../reducers';
+import hvacReducer from '../reducers/hvacReducer';
 
 const store = configureStore({
-  reducer: rootReducer,
+  reducer: {
+    user: hvacReducer, // ✅ Make sure this key is 'hvac'
+  },
 });
 
 export default store;

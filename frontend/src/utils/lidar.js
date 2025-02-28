@@ -1,3 +1,4 @@
+// frontend/src/utils/lidar.js
 export const processLiDARData = (data) => {
   // Process LiDAR data here
   // This is a placeholder function. Replace it with actual data processing logic.

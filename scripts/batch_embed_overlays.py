@@ -6,13 +6,19 @@ from datetime import datetime
 from clip_embedding import embed_image, embed_text
 from dotenv import load_dotenv
 import logging
+import requests
 
 load_dotenv()
 
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[logging.StreamHandler(sys.stdout)]
 )
+
+# Force UTF-8 encoding for stdout (Windows fix)
+sys.stdout.reconfigure(encoding="utf-8")
+sys.stderr.reconfigure(encoding="utf-8")
 
 try:
     mongodb_uri = os.getenv("MONGODB_URI")
@@ -96,6 +102,37 @@ def process_overlays(plan_id, plan_dir):
         logging.info(f"Inserted tile doc for {image_path} (blank={is_blank}).")
 
 
+def get_uuid_from_path(plan_dir):
+    """
+    Extracts the UUID from the plan directory path.
+    Expected structure: data/user/{uuid}/projects/{plan_id}/results/
+    """
+    parts = os.path.normpath(plan_dir).split(os.sep)
+    try:
+        uuid_index = parts.index("user") + 1
+        return parts[uuid_index]  # ✅ Extracts the UUID correctly
+    except (ValueError, IndexError):
+        logging.error(f"❌ Could not extract UUID from path: {plan_dir}")
+        return None
+
+
+def notify_pipeline_complete(uuid, plan_id):
+    """
+    Sends a request to notify the backend that the pipeline has completed.
+    """
+    backend_url = "http://localhost:4000/api/pipeline/complete"
+    payload = {"uuid": uuid, "plan_id": plan_id}
+
+    try:
+        response = requests.post(backend_url, json=payload)
+        if response.status_code == 200:
+            print(f"✅ Successfully notified backend: {response.json()}")
+        else:
+            print(f"❌ Backend notification failed: {response.status_code}, {response.text}")
+    except requests.exceptions.RequestException as e:
+        print(f"❌ Error notifying backend: {e}")
+
+
 if __name__ == "__main__":
     if len(sys.argv) < 3:
         print("Usage: python batch_embed_overlays.py <plan_id> <plan_dir>")
@@ -103,9 +140,16 @@ if __name__ == "__main__":
 
     plan_id = sys.argv[1]
     plan_dir = os.path.normpath(sys.argv[2])
+    uuid = get_uuid_from_path(plan_dir)
 
-    try:
-        process_overlays(plan_id, plan_dir)
-        logging.info(f"Embeddings stored successfully for Plan ID: {plan_id}")
-    except Exception as e:
-        logging.error(f"Error processing overlays: {e}")
+    if uuid:
+        try:
+            process_overlays(plan_id, plan_dir)
+            logging.info(f"Embeddings stored successfully for Plan ID: {plan_id}")
+
+            notify_pipeline_complete(uuid, plan_id)
+
+        except Exception as e:
+            logging.error(f"Error processing overlays: {e}")
+    else:
+        logging.error(f"🚨 Pipeline completed, but UUID extraction failed. Backend will not be notified.")

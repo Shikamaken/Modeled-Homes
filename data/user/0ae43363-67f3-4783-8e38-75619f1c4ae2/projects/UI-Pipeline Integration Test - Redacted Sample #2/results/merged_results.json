@@ -1,0 +1,3082 @@
+[
+  {
+    "page_index": 0,
+    "text": "1",
+    "bbox": [
+      302.9998788,
+      74.87997004800002,
+      308.93905300304937,
+      85.91996563199996
+    ],
+    "confidence": 0.8,
+    "source": "embedded",
+    "tile_filename": "tile_0_0.png",
+    "image_path": "page_0\\tile_0_0.png"
+  },
+  {
+    "page_index": 0,
+    "text": "Cover",
+    "bbox": [
+      242.4003533458199,
+      434.582946166752,
+      308.29987673094183,
+      462.542934982752
+    ],
+    "confidence": 0.8,
+    "source": "embedded",
+    "tile_filename": null,
+    "image_path": null
+  },
+  {
+    "page_index": 0,
+    "text": "Page",
+    "bbox": [
+      314.6403001358603,
+      434.582946166752,
+      369.5779866180159,
+      462.542934982752
+    ],
+    "confidence": 0.8,
+    "source": "embedded",
+    "tile_filename": null,
+    "image_path": null
+  },
+  {
+    "page_index": 0,
+    "text": "UI\u2014Pipeline",
+    "bbox": [
+      138.239944704,
+      483.902926438752,
+      279.2099287102477,
+      511.862915254752
+    ],
+    "confidence": 0.8,
+    "source": "embedded",
+    "tile_filename": null,
+    "image_path": null
+  },
+  {
+    "page_index": 0,
+    "text": "Integration",
+    "bbox": [
+      285.59218803616034,
+      483.902926438752,
+      412.083277674374,
+      511.862915254752
+    ],
+    "confidence": 0.8,
+    "source": "embedded",
+    "tile_filename": null,
+    "image_path": null
+  },
+  {
+    "page_index": 0,
+    "text": "test",
+    "bbox": [
+      418.4320506764617,
+      483.902926438752,
+      473.79105105650314,
+      511.862915254752
+    ],
+    "confidence": 0.8,
+    "source": "embedded",
+    "tile_filename": null,
+    "image_path": null
+  },
+  {
+    "plan_id": "page_0",
+    "page_index": 0,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_0\\tile_0_0.png",
+    "bbox": [
+      313.189058303833,
+      433.5164566040039,
+      357.8314018249512,
+      458.5096664428711
+    ],
+    "text": "page",
+    "confidence": 0.9976011663675308,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_0",
+    "page_index": 0,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_0\\tile_0_0.png",
+    "bbox": [
+      243.39602708816525,
+      438.46148443222046,
+      308.434317111969,
+      458.61834955215454
+    ],
+    "text": "cover",
+    "confidence": 0.9999994754791259,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_0",
+    "page_index": 0,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_0\\tile_0_0.png",
+    "bbox": [
+      347.34375,
+      492.1171875,
+      349.1015625,
+      493.875
+    ],
+    "text": "to",
+    "confidence": 0.1202254481613636,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_0",
+    "page_index": 0,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_0\\tile_0_0.png",
+    "bbox": [
+      286.875,
+      486.4921875,
+      356.8359375,
+      507.5859375
+    ],
+    "text": "integral",
+    "confidence": 0.9997576028108597,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_0",
+    "page_index": 0,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_0\\tile_0_0.png",
+    "bbox": [
+      190.1953125,
+      487.8984375,
+      277.734375,
+      508.2890625
+    ],
+    "text": "pipeline",
+    "confidence": 0.9999994337558746,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_0",
+    "page_index": 0,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_0\\tile_0_0.png",
+    "bbox": [
+      138.3903443813324,
+      488.20116233825684,
+      167.67442345619202,
+      508.67027950286865
+    ],
+    "text": "ul",
+    "confidence": 0.7503540515899658,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      313.59375,
+      468.2109375,
+      322.734375,
+      472.078125
+    ],
+    "text": "nan",
+    "confidence": 0.1257100130120913,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      157.1484375,
+      473.8359160423279,
+      160.83984375,
+      477.5273222923279
+    ],
+    "text": "i1",
+    "confidence": 0.32771477848291397,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      150.89828968048096,
+      467.00686168670654,
+      156.55242919921875,
+      482.12731075286865
+    ],
+    "text": "the",
+    "confidence": 0.17253809173901877,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      291.76790714263916,
+      478.6709518432617,
+      295.01883029937744,
+      483.10891342163086
+    ],
+    "text": "i",
+    "confidence": 0.30278658866882324,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      351.43768072128296,
+      468.7244839668274,
+      357.7958035469055,
+      484.63959646224976
+    ],
+    "text": "tee",
+    "confidence": 0.16466532150904337,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      228.405225276947,
+      469.85669803619385,
+      232.61307477951047,
+      485.23678493499756
+    ],
+    "text": "tee",
+    "confidence": 0.1519808421532313,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      232.94888734817502,
+      471.1975665092468,
+      239.7908806800842,
+      487.0026869773865
+    ],
+    "text": "woe",
+    "confidence": 0.13886550068855286,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      151.5234375,
+      481.21875,
+      156.09375,
+      487.1953125
+    ],
+    "text": "a",
+    "confidence": 0.3599262237548828,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      157.8515625,
+      479.109375,
+      162.421875,
+      487.546875
+    ],
+    "text": "38",
+    "confidence": 0.5145242661237717,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      152.40236520767212,
+      486.49214458465576,
+      156.09377145767212,
+      490.18355083465576
+    ],
+    "text": "i",
+    "confidence": 0.6183122992515564,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      329.4140625,
+      544.8515625,
+      332.2265625,
+      547.3125
+    ],
+    "text": "5",
+    "confidence": 0.4637575149536133,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      297.421875,
+      545.203125,
+      300.234375,
+      549.0703125
+    ],
+    "text": "s",
+    "confidence": 0.5129995346069336,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      231.32812499999997,
+      544.5,
+      234.84374999999997,
+      549.0703125
+    ],
+    "text": "s",
+    "confidence": 0.7510949373245239,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      140.625,
+      544.5,
+      155.390625,
+      549.7734375
+    ],
+    "text": "gses",
+    "confidence": 0.6699777245521545,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      111.56896233558653,
+      543.9860029220581,
+      122.95474648475646,
+      549.5576591491699
+    ],
+    "text": "rss",
+    "confidence": 0.3437240421772003,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      87.7376800775528,
+      544.4152851104736,
+      101.40597581863402,
+      550.4881496429443
+    ],
+    "text": "5583",
+    "confidence": 0.5206422209739685,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      336.09375,
+      543.796875,
+      341.015625,
+      550.125
+    ],
+    "text": "tese",
+    "confidence": 0.13720534183084965,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      77.6953125,
+      545.90625,
+      81.2109375,
+      553.640625
+    ],
+    "text": "the",
+    "confidence": 0.18715567886829376,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      336.09375,
+      551.53125,
+      340.3125,
+      557.15625
+    ],
+    "text": "ih",
+    "confidence": 0.20629704743623734,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      173.671875,
+      543.796875,
+      177.1875,
+      560.671875
+    ],
+    "text": "sene",
+    "confidence": 0.2219259887933731,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      302.34375,
+      545.203125,
+      305.5078125,
+      562.078125
+    ],
+    "text": "whne",
+    "confidence": 0.24851269274950027,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      202.49999999999997,
+      549.7734375,
+      205.66406249999997,
+      562.78125
+    ],
+    "text": "senee",
+    "confidence": 0.1555255115032196,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      112.85156249999999,
+      558.5625,
+      115.66406249999999,
+      563.1328125
+    ],
+    "text": "wod",
+    "confidence": 0.2493122716744741,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      87.26407706737518,
+      559.8364634513855,
+      96.95119142532349,
+      564.3545479774475
+    ],
+    "text": "anb",
+    "confidence": 0.3126748998959859,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      120.23437499999999,
+      558.9140625,
+      122.69531249999999,
+      564.5390625
+    ],
+    "text": "hee",
+    "confidence": 0.2528297354777654,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      81.9140625,
+      557.859375,
+      84.7265625,
+      564.890625
+    ],
+    "text": "ton",
+    "confidence": 0.12795021136601767,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      76.640625,
+      556.8046875,
+      79.8046875,
+      565.2421875
+    ],
+    "text": "sene",
+    "confidence": 0.15426242724061012,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      296.71875,
+      549.421875,
+      300.9375,
+      565.9453125
+    ],
+    "text": "the",
+    "confidence": 0.3104913532733917,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      230.62499999999997,
+      549.0703125,
+      235.19531249999997,
+      566.6484375
+    ],
+    "text": "the",
+    "confidence": 0.5004028876622518,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      302.34375,
+      561.7265625,
+      305.15625,
+      567.703125
+    ],
+    "text": "tn",
+    "confidence": 0.37028196454048157,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      338.0354976654053,
+      557.8755970001221,
+      342.6869201660156,
+      569.8719806671143
+    ],
+    "text": "sene",
+    "confidence": 0.13847116380929947,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      291.4453125,
+      553.2890625,
+      295.3125,
+      572.625
+    ],
+    "text": "toe",
+    "confidence": 0.11464282125234604,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      327.3046875,
+      569.109375,
+      329.0625,
+      573.6796875
+    ],
+    "text": "ao",
+    "confidence": 0.21113118529319763,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      226.5107488632202,
+      552.8858513832092,
+      230.20018100738523,
+      574.4439024925232
+    ],
+    "text": "the",
+    "confidence": 0.31011219322681427,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      338.203125,
+      569.8125,
+      341.71875,
+      574.734375
+    ],
+    "text": "tas",
+    "confidence": 0.18741455674171448,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      297.0703125,
+      567.703125,
+      300.234375,
+      574.734375
+    ],
+    "text": "5",
+    "confidence": 0.8228743076324463,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      231.32812499999997,
+      567.3515625,
+      234.84374999999997,
+      575.7890625
+    ],
+    "text": "mod",
+    "confidence": 0.27623716990152997,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      145.546875,
+      570.515625,
+      151.875,
+      576.4921875
+    ],
+    "text": "ge",
+    "confidence": 0.1549179032444954,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      82.265625,
+      571.21875,
+      84.7265625,
+      577.1953125
+    ],
+    "text": "won",
+    "confidence": 0.1349328557650248,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      77.34375,
+      570.515625,
+      79.1015625,
+      577.1953125
+    ],
+    "text": "i",
+    "confidence": 0.4470332860946655,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      302.6953125,
+      567.0,
+      305.859375,
+      578.25
+    ],
+    "text": "mate",
+    "confidence": 0.291598305106163,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      87.890625,
+      572.625,
+      91.0546875,
+      578.25
+    ],
+    "text": "to",
+    "confidence": 0.41604702174663544,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      98.0859375,
+      569.4609375,
+      101.60156249999999,
+      580.0078125
+    ],
+    "text": "the",
+    "confidence": 0.14377756416797638,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      297.0703125,
+      576.4921875,
+      299.8828125,
+      581.765625
+    ],
+    "text": "6",
+    "confidence": 0.5697974562644958,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      231.32812499999997,
+      577.1953125,
+      234.84374999999997,
+      584.2265625
+    ],
+    "text": "18",
+    "confidence": 0.8522919416427612,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      326.953125,
+      575.7890625,
+      330.1171875,
+      585.28125
+    ],
+    "text": "to",
+    "confidence": 0.1674061119556427,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      117.42187499999999,
+      585.28125,
+      120.58593749999999,
+      591.9609375
+    ],
+    "text": "the",
+    "confidence": 0.2345305730899175,
+    "source": "ocr"
+  },
+  {
+    "page_index": 1,
+    "bbox": [
+      326.8125,
+      585.5625,
+      329.4140625,
+      593.15625
+    ],
+    "text": "tie teee",
+    "source": "ocr",
+    "confidence": 0.1614807496468226,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "tile_filename": null
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      143.7890625,
+      585.28125,
+      156.09375,
+      594.0703125
+    ],
+    "text": "garee",
+    "confidence": 0.30766222476959226,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      297.0703125,
+      581.765625,
+      299.8828125,
+      594.0703125
+    ],
+    "text": "sene",
+    "confidence": 0.1668852623552084,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      183.515625,
+      584.2265625,
+      186.328125,
+      596.1796875
+    ],
+    "text": "to",
+    "confidence": 0.17651785165071487,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      141.328125,
+      589.1484375,
+      143.7890625,
+      597.234375
+    ],
+    "text": "thae",
+    "confidence": 0.16685885190963745,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      119.53124999999999,
+      584.9296875,
+      122.69531249999999,
+      600.3984375
+    ],
+    "text": "sen",
+    "confidence": 0.12885558356841406,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      111.79687499999999,
+      584.2265625,
+      115.66406249999999,
+      601.1015625
+    ],
+    "text": "teee",
+    "confidence": 0.12626732140779495,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      173.3203125,
+      587.390625,
+      176.484375,
+      602.5078125
+    ],
+    "text": "up",
+    "confidence": 0.2994586229324341,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      195.82029104232788,
+      548.71875,
+      200.03904104232785,
+      613.0546875
+    ],
+    "text": "tee",
+    "confidence": 0.13673480848471323,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      230.71428537368772,
+      585.5854339599609,
+      235.80134153366086,
+      613.7970263957977
+    ],
+    "text": "toe",
+    "confidence": 0.13077523310979208,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      65.390625,
+      591.609375,
+      70.6640625,
+      614.109375
+    ],
+    "text": "sene",
+    "confidence": 0.1600070334970951,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      201.44531249999997,
+      577.546875,
+      208.82812499999997,
+      617.2734375
+    ],
+    "text": "the",
+    "confidence": 0.16819576919078827,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      173.3203125,
+      606.7265625,
+      176.1328125,
+      618.328125
+    ],
+    "text": "ioo",
+    "confidence": 0.17452828089396158,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      202.85156249999997,
+      617.9765625,
+      206.36718749999997,
+      623.25
+    ],
+    "text": "i",
+    "confidence": 0.21448542177677155,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      281.6015625,
+      603.5625,
+      285.8203125,
+      623.953125
+    ],
+    "text": "cesser",
+    "confidence": 0.14870223527153334,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      136.0546875,
+      610.59375,
+      138.8671875,
+      627.8203125
+    ],
+    "text": "ii",
+    "confidence": 0.14282236993312836,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      107.57812499999999,
+      609.5390625,
+      110.03906249999999,
+      629.578125
+    ],
+    "text": "is",
+    "confidence": 0.38739319145679474,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      182.8125,
+      619.03125,
+      186.6796875,
+      630.6328125
+    ],
+    "text": "rech",
+    "confidence": 0.24763846397399902,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      173.3203125,
+      623.25,
+      176.1328125,
+      634.1484375
+    ],
+    "text": "do",
+    "confidence": 0.4923570603132248,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      106.87499999999999,
+      629.2265625,
+      110.39062499999999,
+      642.234375
+    ],
+    "text": "mith",
+    "confidence": 0.26321301609277725,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      135.703125,
+      630.984375,
+      138.8671875,
+      643.2890625
+    ],
+    "text": "witt",
+    "confidence": 0.18826411664485931,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      63.98437499999999,
+      617.625,
+      71.015625,
+      646.8046875
+    ],
+    "text": "tene",
+    "confidence": 0.14776393584907055,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      107.22656249999999,
+      643.9921875,
+      110.03906249999999,
+      659.8125
+    ],
+    "text": "i",
+    "confidence": 0.2990283668041229,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      65.390625,
+      647.5078125,
+      70.3125,
+      662.2734375
+    ],
+    "text": "i",
+    "confidence": 0.4133925437927246,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      107.92968749999999,
+      660.515625,
+      109.68749999999999,
+      662.9765625
+    ],
+    "text": "ii",
+    "confidence": 0.4692315608263016,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      135.703125,
+      645.046875,
+      138.8671875,
+      663.6796875
+    ],
+    "text": "ih",
+    "confidence": 0.17103812843561172,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      81.66201531887054,
+      651.6129763126373,
+      84.97752606868744,
+      663.7737901210785
+    ],
+    "text": "mene",
+    "confidence": 0.17207887023687363,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      75.66463351249695,
+      641.1473937034607,
+      79.51807737350464,
+      664.4384951591492
+    ],
+    "text": "i",
+    "confidence": 0.2348279356956482,
+    "source": "ocr"
+  },
+  {
+    "page_index": 1,
+    "bbox": [
+      345.41019916534424,
+      661.2187392711639,
+      349.80473041534424,
+      665.6132705211639
+    ],
+    "text": "f fr",
+    "source": "ocr",
+    "confidence": 0.48382654786109924,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "tile_filename": null
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      297.421875,
+      664.3828125,
+      300.5859375,
+      668.6015625
+    ],
+    "text": "i",
+    "confidence": 0.26941588521003723,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      175.60547947883606,
+      665.4375,
+      179.64844822883606,
+      669.48046875
+    ],
+    "text": "2",
+    "confidence": 0.9069662690162659,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      289.3359375,
+      666.84375,
+      291.09375,
+      669.65625
+    ],
+    "text": "8",
+    "confidence": 0.844756007194519,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      65.0390625,
+      660.515625,
+      71.3671875,
+      672.46875
+    ],
+    "text": "a",
+    "confidence": 0.2547304630279541,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      247.49999999999997,
+      666.140625,
+      252.07031249999997,
+      673.5234375
+    ],
+    "text": "th",
+    "confidence": 0.16656755656003952,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      340.3125,
+      662.2734375,
+      342.7734375,
+      673.5234375
+    ],
+    "text": "ao",
+    "confidence": 0.10911498963832855,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      291.97269916534424,
+      670.1835830211639,
+      296.89457416534424,
+      675.1054580211639
+    ],
+    "text": "of",
+    "confidence": 0.6941785216331482,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      287.92973041534424,
+      670.3593642711639,
+      293.73051166534424,
+      676.1601455211639
+    ],
+    "text": "be",
+    "confidence": 0.23137766122817993,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      346.640625,
+      667.546875,
+      348.75,
+      676.3359375
+    ],
+    "text": "a",
+    "confidence": 0.467185378074646,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      226.40624999999997,
+      662.9765625,
+      230.62499999999997,
+      677.0390625
+    ],
+    "text": "aee",
+    "confidence": 0.12698480983575186,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      260.15625,
+      672.6445419788361,
+      265.25390625,
+      677.7421982288361
+    ],
+    "text": "ti",
+    "confidence": 0.12569750845432281,
+    "source": "ocr"
+  },
+  {
+    "page_index": 1,
+    "bbox": [
+      327.375,
+      662.0625,
+      330.46875,
+      678.9375
+    ],
+    "text": "te wite",
+    "source": "ocr",
+    "confidence": 0.21917415596544743,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "tile_filename": null
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      267.1875,
+      672.46875,
+      269.296875,
+      679.5
+    ],
+    "text": "8",
+    "confidence": 0.17297805845737457,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      294.2578125,
+      677.390625,
+      296.3671875,
+      679.8515625
+    ],
+    "text": "i",
+    "confidence": 0.5870144367218018,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      248.20312499999997,
+      674.578125,
+      251.71874999999997,
+      680.203125
+    ],
+    "text": "to",
+    "confidence": 0.1692190170288086,
+    "source": "ocr"
+  },
+  {
+    "page_index": 1,
+    "bbox": [
+      332.60685896873474,
+      660.8818216323853,
+      337.61057138442993,
+      682.0890398025513
+    ],
+    "text": "seese motee",
+    "source": "ocr",
+    "confidence": 0.2119714230298996,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "tile_filename": null
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      66.09375,
+      678.09375,
+      71.015625,
+      682.6640625
+    ],
+    "text": "ill",
+    "confidence": 0.617861251036326,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      232.03124999999997,
+      664.03125,
+      234.14062499999997,
+      684.0703125
+    ],
+    "text": "wete",
+    "confidence": 0.43432510644197464,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      289.3359375,
+      678.09375,
+      291.09375,
+      684.7734375
+    ],
+    "text": "i",
+    "confidence": 0.1620710790157318,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      255.23437499999997,
+      671.0625,
+      258.75,
+      685.828125
+    ],
+    "text": "thne",
+    "confidence": 0.1800510138273239,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      261.9140625,
+      684.7734375,
+      263.671875,
+      687.5859375
+    ],
+    "text": "3",
+    "confidence": 0.6175876259803772,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      312.93920516967773,
+      661.5080852508545,
+      319.2556571960449,
+      689.0397162437439
+    ],
+    "text": "sese",
+    "confidence": 0.15129555575549603,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      171.2109375,
+      660.8671875,
+      182.4609375,
+      688.9921875
+    ],
+    "text": "li",
+    "confidence": 0.2741200029850006,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      86.484375,
+      680.90625,
+      102.65624999999999,
+      690.046875
+    ],
+    "text": "sere",
+    "confidence": 0.12767605856060982,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      292.0240902900696,
+      681.4078552722931,
+      297.4733090400696,
+      691.3502247333527
+    ],
+    "text": "the",
+    "confidence": 0.16821091870466867,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      91.40625,
+      690.75,
+      93.515625,
+      693.5625
+    ],
+    "text": "a",
+    "confidence": 0.3085036277770996,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      74.1796875,
+      683.71875,
+      78.046875,
+      694.6171875
+    ],
+    "text": "i",
+    "confidence": 0.8276110887527466,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      110.48563957214354,
+      680.6022055149078,
+      120.53843021392821,
+      695.6908757686615
+    ],
+    "text": "tee",
+    "confidence": 0.11765580872694652,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      227.10937499999997,
+      675.984375,
+      229.92187499999997,
+      700.9453125
+    ],
+    "text": "sie",
+    "confidence": 0.13373396545648575,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      270.61336755752563,
+      686.3992853164673,
+      277.02152967453003,
+      702.517081618309
+    ],
+    "text": "the",
+    "confidence": 0.19108366966247559,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      272.109375,
+      701.6484375,
+      275.9765625,
+      706.5703125
+    ],
+    "text": "28",
+    "confidence": 0.8726507127285004,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      75.9375,
+      697.78125,
+      78.75,
+      707.9765625
+    ],
+    "text": "senee",
+    "confidence": 0.17547086626291275,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      244.3359589576721,
+      705.164067864418,
+      248.5547089576721,
+      709.382817864418
+    ],
+    "text": "to",
+    "confidence": 0.576166644692421,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      227.10937499999997,
+      702.3515625,
+      229.57031249999997,
+      708.328125
+    ],
+    "text": "is",
+    "confidence": 0.3959134966135025,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      81.2109375,
+      697.078125,
+      84.375,
+      708.328125
+    ],
+    "text": "sender",
+    "confidence": 0.3764123370250066,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      272.109375,
+      707.2734375,
+      276.6796875,
+      713.953125
+    ],
+    "text": "io",
+    "confidence": 0.24100880324840546,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      334.3359375,
+      717.46875,
+      336.4453125,
+      719.2265625
+    ],
+    "text": "in",
+    "confidence": 0.7584884464740753,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      327.1640968322754,
+      716.5546853542328,
+      330.3984546661377,
+      719.8593707084656
+    ],
+    "text": "6",
+    "confidence": 0.6662236452102661,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      112.14843749999999,
+      712.546875,
+      115.31249999999999,
+      720.984375
+    ],
+    "text": "sene",
+    "confidence": 0.15904948115348816,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      333.45707416534424,
+      719.2265517711639,
+      337.32426166534424,
+      723.0937392711639
+    ],
+    "text": "6",
+    "confidence": 0.3790494203567505,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      327.3046875,
+      719.2265625,
+      331.171875,
+      722.7421875
+    ],
+    "text": "ao",
+    "confidence": 0.3992254137992859,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      312.91083812713623,
+      692.41632771492,
+      319.6525812149048,
+      723.913400888443
+    ],
+    "text": "senee",
+    "confidence": 0.21295368075370788,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      243.63281249999997,
+      686.53125,
+      250.31249999999997,
+      723.09375
+    ],
+    "text": "tee",
+    "confidence": 0.14008664339780807,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      75.234375,
+      711.84375,
+      78.3984375,
+      723.4453125
+    ],
+    "text": "senee",
+    "confidence": 0.19871349334716798,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      118.82812499999999,
+      710.7890625,
+      123.04687499999999,
+      724.1484375
+    ],
+    "text": "te",
+    "confidence": 0.1385968253016472,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      280.8984375,
+      698.8359375,
+      284.4140625,
+      725.203125
+    ],
+    "text": "ten",
+    "confidence": 0.14152691016594568,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      266.484375,
+      683.71875,
+      271.0546875,
+      725.90625
+    ],
+    "text": "th",
+    "confidence": 0.17700564861297607,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      270.7166647911072,
+      717.6580549478531,
+      277.96425104141235,
+      726.960932135582
+    ],
+    "text": "ahd",
+    "confidence": 0.13190165162086487,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_0.png",
+    "bbox": [
+      227.10937499999997,
+      709.03125,
+      229.92187499999997,
+      728.71875
+    ],
+    "text": "sewse",
+    "confidence": 0.20481185615062714,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      101.95312499999999,
+      294.32812500000006,
+      103.71093749999999,
+      297.49218750000006
+    ],
+    "text": "5",
+    "confidence": 0.994979202747345,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      190.8984375,
+      306.98437500000006,
+      192.65625,
+      310.14843750000006
+    ],
+    "text": "a",
+    "confidence": 0.6915052533149719,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      133.59378218650818,
+      310.3593449592591,
+      141.25784039497375,
+      318.93747854232794
+    ],
+    "text": "io",
+    "confidence": 0.2607598602771759,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      162.421875,
+      310.50000000000006,
+      164.8828125,
+      322.10156250000006
+    ],
+    "text": "ti",
+    "confidence": 0.12925539165735245,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      204.96093749999997,
+      315.07031250000006,
+      210.58593749999997,
+      324.91406250000006
+    ],
+    "text": "93",
+    "confidence": 0.3015158846974373,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      135.3515625,
+      317.53125000000006,
+      139.921875,
+      326.32031250000006
+    ],
+    "text": "go",
+    "confidence": 0.4844745546579361,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      143.7890625,
+      304.52343750000006,
+      146.6015625,
+      328.78125000000006
+    ],
+    "text": "ti",
+    "confidence": 0.14718541502952576,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      190.19529104232788,
+      310.14843750000006,
+      193.00779104232788,
+      330.53906250000006
+    ],
+    "text": "thay",
+    "confidence": 0.23782279714941978,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      162.0703125,
+      321.39843750000006,
+      165.234375,
+      333.00000000000006
+    ],
+    "text": "the",
+    "confidence": 0.1897397538026174,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      272.8125,
+      334.75781250000006,
+      274.5703125,
+      336.51562500000006
+    ],
+    "text": "a",
+    "confidence": 0.35394370555877686,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      272.109375,
+      333.00000000000006,
+      274.5703125,
+      336.86718750000006
+    ],
+    "text": "i",
+    "confidence": 0.24739143252372742,
+    "source": "ocr"
+  },
+  {
+    "page_index": 1,
+    "bbox": [
+      354.375,
+      323.9797439575196,
+      357.5390625,
+      348.21076869964605
+    ],
+    "text": "the sene",
+    "source": "ocr",
+    "confidence": 0.15577971438566843,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "tile_filename": null
+  },
+  {
+    "page_index": 1,
+    "bbox": [
+      325.40625,
+      334.68750000000006,
+      330.1171875,
+      343.89843750000006
+    ],
+    "text": "cl e",
+    "source": "ocr",
+    "confidence": 0.6106863617897034,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "tile_filename": null
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      100.19531249999999,
+      347.06250000000006,
+      105.46874999999999,
+      351.28125000000006
+    ],
+    "text": "i7",
+    "confidence": 0.5786059945821762,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      333.28125,
+      347.41406250000006,
+      337.5,
+      353.39062500000006
+    ],
+    "text": "the",
+    "confidence": 0.6650132139523824,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      328.7109375,
+      347.76562500000006,
+      330.46875,
+      354.44531250000006
+    ],
+    "text": "e",
+    "confidence": 0.9050477743148804,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      311.8359375,
+      351.63281250000006,
+      316.7578125,
+      357.96093750000006
+    ],
+    "text": "i5",
+    "confidence": 0.1656179279088974,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      231.96194171905515,
+      349.936583518982,
+      240.05302906036374,
+      359.32098913192755
+    ],
+    "text": "an",
+    "confidence": 0.24063809216022491,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      232.6516771316528,
+      355.1691012382508,
+      241.56480789184567,
+      367.24629449844366
+    ],
+    "text": "93",
+    "confidence": 0.3574516624212265,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      310.78125,
+      358.31250000000006,
+      317.4609375,
+      367.45312500000006
+    ],
+    "text": "go",
+    "confidence": 0.733867734670639,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      155.04755973815918,
+      390.17133879661566,
+      160.53192615509033,
+      403.4531228542328
+    ],
+    "text": "th",
+    "confidence": 0.18558204174041748,
+    "source": "ocr"
+  },
+  {
+    "page_index": 1,
+    "bbox": [
+      331.875,
+      404.71875,
+      335.25,
+      408.375
+    ],
+    "text": "mn my",
+    "source": "ocr",
+    "confidence": 0.7106945812702179,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "tile_filename": null
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      246.09374999999997,
+      399.4453125,
+      249.25781249999997,
+      409.2890625
+    ],
+    "text": "is",
+    "confidence": 0.7138157486915588,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      160.3125,
+      394.171875,
+      166.640625,
+      410.34375
+    ],
+    "text": "wh",
+    "confidence": 0.19108491390943527,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      155.390625,
+      404.015625,
+      160.3125,
+      415.265625
+    ],
+    "text": "iis",
+    "confidence": 0.21692327658335367,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      275.2734375,
+      394.875,
+      278.4375,
+      419.1328125
+    ],
+    "text": "sene",
+    "confidence": 0.17220674082636833,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      245.74218749999997,
+      410.6953125,
+      249.96093749999997,
+      420.5390625
+    ],
+    "text": "rit",
+    "confidence": 0.17096596956253052,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      227.10935354232785,
+      395.57813572883606,
+      230.27341604232785,
+      420.18751072883606
+    ],
+    "text": "teee",
+    "confidence": 0.16795143485069275,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_0_1350.png",
+    "bbox": [
+      320.9765625,
+      411.3984375,
+      325.1953125,
+      423.703125
+    ],
+    "text": "tee",
+    "confidence": 0.13709513346354166,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      358.3125,
+      481.21875,
+      359.71875,
+      483.1875
+    ],
+    "text": "i",
+    "confidence": 0.5406506657600403,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      352.125,
+      467.71875,
+      356.0625,
+      485.71875
+    ],
+    "text": "ten",
+    "confidence": 0.12999685108661652,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      356.90625,
+      471.09375,
+      363.09375,
+      486.0
+    ],
+    "text": "33",
+    "confidence": 0.5793459564447403,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      546.75,
+      489.375,
+      551.8125,
+      512.71875
+    ],
+    "text": "and",
+    "confidence": 0.2547398159901301,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      533.8125,
+      510.46875,
+      541.96875,
+      517.78125
+    ],
+    "text": "il",
+    "confidence": 0.5703946352005005,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      536.0625,
+      520.875,
+      539.15625,
+      524.8125
+    ],
+    "text": "ih",
+    "confidence": 0.2353818491101265,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      327.375,
+      543.65625,
+      332.71875,
+      547.875
+    ],
+    "text": "35",
+    "confidence": 0.5933736860752106,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      335.13983738422394,
+      543.9065494537354,
+      338.105903506279,
+      556.9116153717041
+    ],
+    "text": "tee",
+    "confidence": 0.1420476014415423,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      327.65625,
+      557.15625,
+      329.625,
+      561.09375
+    ],
+    "text": "id",
+    "confidence": 0.7375132441520691,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      327.65625,
+      563.0625,
+      329.0625,
+      566.71875
+    ],
+    "text": "a",
+    "confidence": 0.6104434132575989,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      327.375,
+      567.84375,
+      329.34375,
+      574.875
+    ],
+    "text": "not",
+    "confidence": 0.28207068145275116,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      337.5,
+      543.65625,
+      341.4375,
+      575.71875
+    ],
+    "text": "sene",
+    "confidence": 0.1364790629595518,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      327.375,
+      575.4375,
+      329.34375,
+      585.5625
+    ],
+    "text": "io",
+    "confidence": 0.14225193113088608,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      416.53124999999994,
+      589.5,
+      421.59374999999994,
+      591.75
+    ],
+    "text": "16",
+    "confidence": 0.5669516324996948,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      416.81249999999994,
+      594.84375,
+      422.15624999999994,
+      598.5
+    ],
+    "text": "99",
+    "confidence": 0.5468996912240982,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      425.81249999999994,
+      603.28125,
+      429.74999999999994,
+      608.0625
+    ],
+    "text": "is",
+    "confidence": 0.3403209447860718,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      432.28124999999994,
+      603.28125,
+      435.65624999999994,
+      615.375
+    ],
+    "text": "mene",
+    "confidence": 0.15148921497166157,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      448.3020458221435,
+      594.2319831848145,
+      453.1998023986816,
+      617.1098442077637
+    ],
+    "text": "the",
+    "confidence": 0.2968701422214508,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      377.4375,
+      602.71875,
+      389.25,
+      617.625
+    ],
+    "text": "the",
+    "confidence": 0.3106619715690613,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      385.3125,
+      608.6250171661377,
+      388.6875,
+      621.2812671661377
+    ],
+    "text": "tene",
+    "confidence": 0.13484031334519386,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      377.4375,
+      617.0625,
+      381.9375,
+      630.0
+    ],
+    "text": "t",
+    "confidence": 0.16647005081176758,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      449.99999999999994,
+      619.3125,
+      452.53124999999994,
+      631.6875
+    ],
+    "text": "a",
+    "confidence": 0.30111944675445557,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      454.78124999999994,
+      622.125,
+      458.15624999999994,
+      648.28125
+    ],
+    "text": "senee",
+    "confidence": 0.1869836628437042,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      449.0191869735717,
+      661.9325866699219,
+      452.00587177276606,
+      670.0602722167969
+    ],
+    "text": "in",
+    "confidence": 0.6277441084384918,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      419.7781562805175,
+      666.9662733078003,
+      425.13026618957514,
+      669.7620706558228
+    ],
+    "text": "os",
+    "confidence": 0.41372139751911163,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      356.34375,
+      660.9375,
+      361.125,
+      676.96875
+    ],
+    "text": "the",
+    "confidence": 0.1563202440738678,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      345.9375,
+      664.59375,
+      348.46875,
+      676.40625
+    ],
+    "text": "f",
+    "confidence": 0.24600999057292938,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      389.2962369918823,
+      671.8249597549438,
+      395.36276721954346,
+      686.686526298523
+    ],
+    "text": "the",
+    "confidence": 0.14015430957078934,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      383.0805802345276,
+      671.5061416625977,
+      387.98734045028687,
+      687.1852798461914
+    ],
+    "text": "ten",
+    "confidence": 0.13369357337554297,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      383.57380199432373,
+      686.154616355896,
+      388.0780076980591,
+      697.8815431594849
+    ],
+    "text": "tene",
+    "confidence": 0.14844744466245174,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      454.78124999999994,
+      691.03125,
+      457.87499999999994,
+      702.84375
+    ],
+    "text": "b",
+    "confidence": 0.2806183993816376,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      397.6875,
+      698.90625,
+      399.65625,
+      702.5625
+    ],
+    "text": "a",
+    "confidence": 0.5331194996833801,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      425.2716379165649,
+      704.0985517501831,
+      428.14904308319086,
+      706.954327583313
+    ],
+    "text": "33",
+    "confidence": 0.925823301076889,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      448.7557125091552,
+      669.066198348999,
+      452.97060012817377,
+      707.9438610076904
+    ],
+    "text": "suil",
+    "confidence": 0.22541731968522072,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      357.30000472068787,
+      712.7999897003174,
+      359.83125472068787,
+      715.8375034332275
+    ],
+    "text": "ir",
+    "confidence": 0.713067352771759,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      454.49999999999994,
+      701.71875,
+      457.87499999999994,
+      716.90625
+    ],
+    "text": "seneer",
+    "confidence": 0.19850929329792658,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      326.8125,
+      712.125,
+      331.59375,
+      722.8125
+    ],
+    "text": "go",
+    "confidence": 0.6424783915281296,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      357.1875,
+      716.34375,
+      360.28125,
+      722.8125
+    ],
+    "text": "so",
+    "confidence": 0.8604157269001007,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_0.png",
+    "bbox": [
+      448.94320964813227,
+      709.2492427825928,
+      452.8722639083862,
+      724.8140716552734
+    ],
+    "text": "and",
+    "confidence": 0.23364450534184775,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_1350.png",
+    "bbox": [
+      379.125,
+      328.21875000000006,
+      384.46875,
+      342.28125000000006
+    ],
+    "text": "33",
+    "confidence": 0.4769519045948982,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_1350.png",
+    "bbox": [
+      373.78125,
+      327.65625000000006,
+      378.28125,
+      342.84375000000006
+    ],
+    "text": "thae",
+    "confidence": 0.15429656766355038,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_1350.png",
+    "bbox": [
+      326.5818957388401,
+      345.54353713989263,
+      332.9577637910843,
+      360.4457874298096
+    ],
+    "text": "l",
+    "confidence": 0.129941925406456,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_1350.png",
+    "bbox": [
+      332.4375,
+      349.31250000000006,
+      335.53125,
+      361.68750000000006
+    ],
+    "text": "tea",
+    "confidence": 0.12742729733387628,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_1350.png",
+    "bbox": [
+      360.84375,
+      363.93750000000006,
+      362.25,
+      365.90625000000006
+    ],
+    "text": "a",
+    "confidence": 0.275664746761322,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_1350.png",
+    "bbox": [
+      363.65625,
+      360.00000000000006,
+      367.03125,
+      370.96875000000006
+    ],
+    "text": "a",
+    "confidence": 0.13675785064697266,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_1350.png",
+    "bbox": [
+      334.5468760728836,
+      402.32811641693115,
+      337.6406260728836,
+      405.42186641693115
+    ],
+    "text": "b",
+    "confidence": 0.18792137503623962,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_1350.png",
+    "bbox": [
+      332.4375,
+      409.78125,
+      333.84375,
+      414.84375
+    ],
+    "text": "it",
+    "confidence": 0.9120226204395294,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_1350.png",
+    "bbox": [
+      334.9923974275589,
+      410.2728066444397,
+      337.55351436138153,
+      416.35328435897827
+    ],
+    "text": "rit",
+    "confidence": 0.16100104401508966,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_1350.png",
+    "bbox": [
+      358.3125,
+      420.1875,
+      361.40625,
+      424.40625
+    ],
+    "text": "7",
+    "confidence": 0.8226426243782043,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_1350.png",
+    "bbox": [
+      360.9281258583069,
+      418.52812242507935,
+      369.30937242507935,
+      426.12187242507935
+    ],
+    "text": "the",
+    "confidence": 0.3101390302181244,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_1350.png",
+    "bbox": [
+      338.02964079380035,
+      401.8594422340393,
+      341.46495616436005,
+      425.02117109298706
+    ],
+    "text": "ten",
+    "confidence": 0.12674838056166968,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_1350.png",
+    "bbox": [
+      365.0625,
+      424.96875,
+      367.59375,
+      428.0625
+    ],
+    "text": "m",
+    "confidence": 0.8247682452201843,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_1350.png",
+    "bbox": [
+      335.174391746521,
+      418.4572048187256,
+      337.6931791305542,
+      428.14226245880127
+    ],
+    "text": "ma",
+    "confidence": 0.15363769233226776,
+    "source": "ocr"
+  },
+  {
+    "plan_id": "page_1",
+    "page_index": 1,
+    "image_path": "C:\\Users\\shika\\modeled-homes-hvac\\data\\user\\0ae43363-67f3-4783-8e38-75619f1c4ae2\\projects\\UI-Pipeline Integration Test - Redacted Sample #2\\results\\page_1\\tile_1350_1350.png",
+    "bbox": [
+      331.2310343384743,
+      416.1646499633789,
+      335.05409574508667,
+      428.7568874359131
+    ],
+    "text": "the",
+    "confidence": 0.18308680752913156,
+    "source": "ocr"
+  }
+]

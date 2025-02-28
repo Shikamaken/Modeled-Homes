@@ -1,3 +1,4 @@
+// backend/models/HVACProject.js
 const mongoose = require('mongoose');
 
 const HVACProjectSchema = new mongoose.Schema({

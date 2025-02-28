@@ -4,7 +4,7 @@ import torch
 import json
 from PIL import Image
 from sentence_transformers import SentenceTransformer
-from config import DATA_INPUT, DATA_OUTPUT
+from config import get_user_project_path
 
 # Load the CLIP model (both image and text encoders)
 model = SentenceTransformer('clip-ViT-B-32', device='cpu')
@@ -12,7 +12,11 @@ model.eval()
 
 # We’ll define a chunk size that’s safely under the model’s max token limit
 # so we don’t get shape mismatch or indexing errors for large text.
-MAX_TOKENS_PER_CHUNK = 70
+MAX_TOKENS_PER_CHUNK = 65
+
+def get_results_dir(uuid, plan_id):
+    """Returns the correct results directory for the given user project."""
+    return os.path.join(get_user_project_path(uuid, plan_id), "results")
 
 def embed_image(img_path: str):
     """
@@ -90,26 +94,28 @@ def embed_text(text: str):
         raise
 
 if __name__ == "__main__":
-    """
-    Example usage for stand-alone embedding calls.
-    The pipeline typically calls embed_image() or embed_text().
-    """
-    if len(sys.argv) < 3:
-        print("Usage: python clip_embedding.py <mode> <input>", file=sys.stderr)
+    if len(sys.argv) < 5:
+        print("Usage: python clip_embedding.py <mode> <input> <uuid> <plan_id>", file=sys.stderr)
         print("  mode can be 'image' or 'text'")
         sys.exit(1)
 
     mode = sys.argv[1]
     input_item = sys.argv[2]
+    uuid = sys.argv[3]
+    plan_id = sys.argv[4]
 
     try:
         if mode.lower() == 'image':
-            # For demonstration, assume input_item is the actual path
-            emb = embed_image(input_item)
-            output_path = os.path.join(DATA_OUTPUT, "results", f"{os.path.splitext(os.path.basename(input_item))[0]}_img_emb.json")
+            # `uuid` and `plan_id` must be set correctly before this block
+            results_dir = get_results_dir(uuid, plan_id)
+            output_path = os.path.join(results_dir, f"{os.path.splitext(os.path.basename(input_item))[0]}_img_emb.json") 
+        
+            emb = embed_image(input_item)  # Embed the image
         elif mode.lower() == 'text':
-            emb = embed_text(input_item)
-            output_path = os.path.join(DATA_OUTPUT, "results", "text_embedding.json")
+            results_dir = get_results_dir(uuid, plan_id)
+            output_path = os.path.join(results_dir, "text_embedding.json")
+
+            emb = embed_text(input_item)  # Embed the text
         else:
             raise ValueError("Mode must be 'image' or 'text'")
 

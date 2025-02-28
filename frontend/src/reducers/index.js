@@ -1,3 +1,4 @@
+// frontend/src/reducers/index.js
 import { combineReducers } from '@reduxjs/toolkit';
 import hvacReducer from './hvacReducer';
 

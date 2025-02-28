@@ -1,3 +1,4 @@
+// backend/routes/hvac.js
 const router = require('express').Router();
 const hvacController = require('../controllers/hvacController');
 const auth = require('../middleware/auth');

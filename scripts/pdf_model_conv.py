@@ -2,7 +2,7 @@ import os
 import sys
 import subprocess
 import logging
-from config import DATA_INPUT, DATA_OUTPUT
+from config import get_user_project_path
 
 # Setup logging
 logging.basicConfig(
@@ -11,131 +11,108 @@ logging.basicConfig(
     handlers=[logging.StreamHandler()]
 )
 
-def pdf_model_conv():
+def pdf_model_conv(uuid, plan_id):
     """
-    Orchestrates the entire pipeline:
-    1) For each PDF in DATA_INPUT, generate a unique plan_id
-    2) Create an output directory
-    3) Sequentially run pipeline steps, calling appropriate scripts
+    Runs the pipeline:
+    1) Accesses the project input directory using uuid and plan_id.
+    2) Processes the target PDF.
+    3) Saves outputs to data/user/{uuid}/projects/{plan_id}/results/.
     """
-    logging.info("Starting PDF Model Conversion Pipeline...")
+    logging.info(f"Starting pipeline for '{plan_id}' under user '{uuid}'...")
 
-    # Step 1: List PDFs in DATA_INPUT
-    pdf_files = [f for f in os.listdir(DATA_INPUT) if f.lower().endswith(".pdf")]
+    # Step 1: Get PDF upload directory
+    user_project_dir = get_user_project_path(uuid, plan_id)
+
+    if not os.path.exists(user_project_dir):
+        logging.error(f"🚨 Project input directory does not exist: {user_project_dir}")
+        raise FileNotFoundError(f"Project input directory not found: {user_project_dir}")
+
+    # Step 2: Define uploads and results directories at the same level
+    uploads_dir = os.path.join(user_project_dir, "uploads")
+    results_dir = os.path.join(user_project_dir, "results")
+
+    # Create missing directories
+    os.makedirs(uploads_dir, exist_ok=True)
+    os.makedirs(results_dir, exist_ok=True)
+
+    logging.info(f"📂 Project Base Directory: {user_project_dir}")
+    logging.info(f"📥 Uploads Directory: {uploads_dir}")
+    logging.info(f"📊 Results Directory: {results_dir}")
+
+    # Step 3: Get PDF files from uploads directory
+    pdf_files = [f for f in os.listdir(uploads_dir) if f.lower().endswith(".pdf")]
+
     if not pdf_files:
-        logging.warning("No PDF files found in the input directory.")
-        return
+        logging.warning(f"⚠️ No PDF files found in: {uploads_dir}")
+    else:
+        logging.info(f"✅ Found {len(pdf_files)} PDFs in {uploads_dir}: {pdf_files}")
 
-    for filename in pdf_files:
-        pdf_path = os.path.join(DATA_INPUT, filename)
-        plan_id = os.path.splitext(filename)[0]  # Plan identifier (e.g., "building_plan")
-        
-        # Step 2: Create output directory for the plan
-        plan_dir = os.path.join(DATA_OUTPUT, "results", plan_id)
-        os.makedirs(plan_dir, exist_ok=True)
-        logging.info(f"Processing '{plan_id}' with output directory: {plan_dir}")
+    pdf_path = os.path.join(uploads_dir, pdf_files[0]) if pdf_files else None
+    if pdf_path:
+        logging.info(f"Using PDF: {pdf_path}")
 
-        # Define intermediate output file paths
-        paths = {
-            "embedded_text": os.path.join(plan_dir, "embedded_text.json"),
-            "tile_meta": os.path.join(plan_dir, "tile_meta.json"),
-            "ocr_results": os.path.join(plan_dir, "ocr_results.json"),
-            "merged_results": os.path.join(plan_dir, "merged_results.json"),
-            "categorized_results": os.path.join(plan_dir, "categorized_results.json"),
-            "line_detection_results": os.path.join(plan_dir, "line_detection_results.json"),
-            "classified_walls": os.path.join(plan_dir, "classified_walls.json"),
-            "linked_dimensions": os.path.join(plan_dir, "linked_dimensions.json"),
-            "final_overlays": os.path.join(plan_dir, "final_overlays.json"),
-        }
+    # Step 4: Define output paths
+    paths = {
+        "embedded_text": os.path.join(results_dir, "embedded_text.json"),
+        "tile_meta": os.path.join(results_dir, "tile_meta.json"),
+        "ocr_results": os.path.join(results_dir, "ocr_results.json"),
+        "merged_results": os.path.join(results_dir, "merged_results.json"),
+        "categorized_results": os.path.join(results_dir, "categorized_results.json"),
+        "line_detection_results": os.path.join(results_dir, "line_detection_results.json"),
+        "classified_walls": os.path.join(results_dir, "classified_walls.json"),
+        "linked_dimensions": os.path.join(results_dir, "linked_dimensions.json"),
+        "final_overlays": os.path.join(results_dir, "final_overlays.json"),
+    }
 
-        # Step 3: Run pipeline steps sequentially
-        try:
-            # Extract embedded text
-            run_script("extract_embedded_text.py", [pdf_path, paths["embedded_text"]])
+    # Step 5: Run pipeline steps
+    try:
+        pipeline_steps = [
+            ("extract_embedded_text.py", [pdf_path, paths["embedded_text"]]),
+            ("pdf_to_tiles.py", [pdf_path, results_dir, "300", "1500"]),
+            ("ocr_tiles.py", [results_dir, paths["ocr_results"], paths["tile_meta"], "--save-vis"]),
+            ("merge_text.py", [paths["embedded_text"], paths["ocr_results"], paths["tile_meta"], paths["merged_results"]]),
+            ("id_area_scale.py", [paths["merged_results"]]),
+            ("categorize_text.py", [paths["merged_results"], paths["categorized_results"]]),
+            ("line_detection.py", [results_dir, paths["tile_meta"], paths["line_detection_results"]]),
+            ("classify_structures.py", [paths["line_detection_results"], paths["classified_walls"]]),
+            ("link_dimensions.py", [paths["categorized_results"], paths["line_detection_results"], paths["linked_dimensions"]]),
+            ("assemble_overlay.py", [plan_id, results_dir, paths["final_overlays"]]),
+            ("batch_embed_overlays.py", [plan_id, results_dir]),
+        ]
 
-            # Convert PDF to tiles
-            run_script("pdf_to_tiles.py", [pdf_path, plan_dir, "300", "1500"])
+        for script_name, args in pipeline_steps:
+            run_script(script_name, args)
 
-            # Perform OCR on tiles
-            run_script("ocr_tiles.py", [
-                plan_dir, 
-                paths["ocr_results"], 
-                paths["tile_meta"],
-                "--save-vis"
-            ])
+        logging.info(f"✅ Pipeline completed for '{plan_id}'. Results saved in: {results_dir}")
 
-            # Merge text (embedded + OCR)
-            run_script("merge_text.py", [
-                paths["embedded_text"],
-                paths["ocr_results"],
-                paths["tile_meta"],
-                paths["merged_results"]
-            ])
-
-            # ID floor plan, surface area, and scale
-            run_script("id_area_scale.py", [
-                paths["merged_results"]
-            ])
-
-            # Categorize merged text
-            run_script("categorize_text.py", [
-                paths["merged_results"],
-                paths["categorized_results"]
-            ])
-
-            # Detect lines in tiles
-            run_script("line_detection.py", [
-                plan_dir,
-                paths["tile_meta"],
-                paths["line_detection_results"]
-            ])
-
-            # Classify detected lines into structures (walls, partitions, etc.)
-            run_script("classify_structures.py", [
-                paths["line_detection_results"],
-                paths["classified_walls"]
-            ])
-
-            # Link dimensions to detected lines
-            run_script("link_dimensions.py", [
-                paths["categorized_results"],
-                paths["line_detection_results"],
-                paths["linked_dimensions"]
-            ])
-
-            # Prepare overlays
-            run_script("assemble_overlay.py", [
-                plan_id, 
-                plan_dir,
-                paths["final_overlays"]
-            ])
-
-            # Embed overlays
-            run_script("batch_embed_overlays.py", [plan_id, plan_dir])
-
-            logging.info(f"Pipeline successfully completed for '{plan_id}'.")
-
-        except Exception as e:
-            logging.error(f"Pipeline failed for '{plan_id}': {e}")
+    except Exception as e:
+        logging.error(f"❌ Pipeline failed for '{plan_id}': {e}")
 
 def run_script(script_name, args):
     """
-    Helper function to execute a script with subprocess.run().
+    Helper function to execute a script.
     """
     script_path = get_script_path(script_name)
-    logging.info(f"Running {script_name} with args: {args}")
+    logging.info(f"▶️ Running {script_name} with args: {args}")
     subprocess.run([sys.executable, script_path] + args, check=True)
-    logging.info(f"{script_name} completed successfully.")
+    logging.info(f"✅ {script_name} completed successfully.")
 
 def get_script_path(script_name):
     """
-    Resolves the full path to a script.
+    Returns the absolute path to a script.
     """
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    script_path = os.path.join(script_dir, script_name)
-    if not os.path.isfile(script_path):
-        raise FileNotFoundError(f"Script not found: {script_path}")
-    return script_path
+    path = os.path.join(script_dir, script_name)
+    if not os.path.isfile(path):
+        raise FileNotFoundError(f"Script not found: {path}")
+    return path
 
 if __name__ == "__main__":
-    pdf_model_conv()
+    if len(sys.argv) != 3:
+        print("Usage: python pdf_model_conv.py <uuid> <plan_id>")
+        sys.exit(1)
+
+    uuid_arg = sys.argv[1]
+    plan_id_arg = sys.argv[2]
+
+    pdf_model_conv(uuid_arg, plan_id_arg)
